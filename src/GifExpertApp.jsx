@@ -31,13 +31,14 @@ export const GifExpertApp = () => {
     <>
 
         <h1>GifExpertApp</h1> 
-        <button onClick={borrarTodo} className = "button-all">Borrar Todo</button>
+        
         
 
         <AddCategory
             onNewCategory={ value => onAddCategory(value)}
         />
-
+        <br></br>
+        <button onClick={borrarTodo} className = "button-all">Borrar Todo</button>
         {   
             categories.map((category) => (
                 <GifGrid 

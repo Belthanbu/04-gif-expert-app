@@ -14,8 +14,10 @@ export const GifGrid = ({category,borrarGif}) => {
         
         <div className="title-container">
             <h3>{category}</h3>
-            <button onClick={() => {borrarGif(category)}} className = "button-all">X</button>
+            <button onClick={() => {borrarGif(category)}} className = "button-all">Borrar Categoria</button>
+            
         </div>
+        <br></br>
         {
             isLoading&&(<h2>Cargando...</h2> )
            

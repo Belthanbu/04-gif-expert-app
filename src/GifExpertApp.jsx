@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifGrid } from "./components/GifGrid"
+import { AddCategory, GifGrid } from './components';
 
 export const GifExpertApp = () => {
   
@@ -9,8 +8,6 @@ export const GifExpertApp = () => {
   const  onAddCategory = (newCategory) =>{
         if( categories.includes(newCategory)) return;
 
-        // console.log(newCategory)
-        // categories.push(NewCategory);
         setCategories([newCategory, ...categories, ]);
   }
 
@@ -18,22 +15,15 @@ export const GifExpertApp = () => {
     setCategories ([])
   }
   
-
   const borrarGif = (gifCategory) => {
     setCategories (
       categories.filter(categoria => categoria !== gifCategory)
     )
   }
-
-  
  
   return (
     <>
-
         <h1>GifExpertApp</h1> 
-        
-        
-
         <AddCategory
             onNewCategory={ value => onAddCategory(value)}
         />
@@ -46,12 +36,8 @@ export const GifExpertApp = () => {
                     category={category}
                     borrarGif = {borrarGif}
                 />
-            ))
-            
-                
+            ))      
         }
-
-
     </>
   )
 }

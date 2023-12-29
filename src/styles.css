@@ -69,7 +69,6 @@
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: "Roboto";
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -83,3 +82,15 @@
     word-break: break-word;
     border: 0;
   }
+
+
+  /* Para dispositivos pequeños */
+@media screen and (max-width: 576px) {
+
+  .card p {
+    font-size: 1.2rem;
+  }
+
+
+
+}
